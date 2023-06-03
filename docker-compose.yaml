@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  akili-auth:
+    build: ./Akilipos-auth
+    container_name: akili_auth_container
+    ports:
+      - "8000-8000"
+    # volumes:
+      # - ./Akilipos-auth:/index
+      # - ./Akilipos-auth/node_modules
+  akili-product:
+    build: ./akilipos-products
+    container_name: akili_product_container
+    ports:
+      - "8001-8001"
+    # volumes:
+      # - ./Akilipos-products:/index
+      # - ./Akilipos-products/node_modules
+  order-management:
+    build: ./order-management
+    container_name: akili_order_container
+    ports:
+      - "8002-8002"
+    # volumes:
+      # - ./order-management:/index
+      # - ./order-management/node_modules
